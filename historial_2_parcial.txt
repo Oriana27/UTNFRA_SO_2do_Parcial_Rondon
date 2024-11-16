@@ -1,0 +1,287 @@
+    1  git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git
+    2  ./UTN-FRA_SO_Examenes/202406/script_Precondicion.sh
+    3  source ~/.bashrc
+    4  sudo apt update 
+    5  sudo apt install ansible –y 
+    6  sudo apt list --installed | grep ansible 
+    7  ansible --version
+    8  sudo apt install ansible
+    9  ansible --version
+   10  ssh-keygen -t ed25519
+   11  cd .ssh
+   12  cat id_ed25519.pub >> authorized_keys 
+   13  cat authorized_keys 
+   14  cd ..
+   15  ifcongig
+   16  sudo apt install net-tools 
+   17  ifcongig
+   18  sudo apt update 
+   19  sudo apt install net-tools 
+   20  ifcongig
+   21  ifconfig
+   22  exit
+   23  ssh vagrant@192.168.56.3 
+   24  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+   25  # Add Docker's official GPG key:
+   26  sudo apt-get update
+   27  sudo apt-get install ca-certificates curl
+   28  sudo install -m 0755 -d /etc/apt/keyrings
+   29  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   30  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   31  # Add the repository to Apt sources:
+   32  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   33    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   34  sudo apt-get update
+   35  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   36  sudo docker run hello-world
+   37  sudo usermod -a -G docker $(whoami) 
+   38  exit
+   39  grep docker /etc/group 
+   40  sudo systemctl status docker 
+   41  cat << EOF > crear_usuario.sh
+   42  #!/bin/bash
+   43  sudo useradd -m -s /bin/bash -c "Creando Usuario" rondon
+   44  # Establecer la contraseña del usuario
+   45  echo "rondon:rondon" | sudo chpasswd
+   46  echo "Usuario 'rondon' creado con éxito con la contraseña 'rondon'."
+   47  EOF
+   48  chmod 755 crear_usuario.sh
+   49  sudo ./crear_usuario.sh
+   50  ls -l
+   51  sudo su - rondon
+   52  pwd
+   53  lsblk
+   54  sudo fdisk –l  
+   55  sudo fdisk -l  
+   56  ls -l
+   57  cd RTA_Examen_20241115/
+   58  ls -l
+   59  vim Punto_A.sh 
+   60  cat Punto_A.sh 
+   61  cd ..
+   62  sudo su - rondon
+   63  sudo usermod -aG sudo rondon
+   64  groups rondon
+   65  sudo su - rondon
+   66  exit
+   67  suso su - rondon
+   68  su - rondon
+   69  ls -l
+   70  cd RTA_Examen_20241115/
+   71  ls -l
+   72  vim Punto_A.sh
+   73  cd ..
+   74  ls <Path_Repo>/202406/bash_script/Lista_Usuarios.txt
+   75  find /home/vagrant/ -name Lista_Usuarios.txt
+   76  ls UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+   77  cat UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt 
+   78  ls UTN-FRA_SO_Examenes/202406/docker/ 
+   79  cd UTN-FRA_SO_Examenes/202406/docker/ 
+   80  ls -l
+   81  cat index.html 
+   82  vim index.html 
+   83  ls -l
+   84  su - rondon
+   85  ls -l
+   86  docker run -d -p 8080:80 –v /UTN-FRA_SO_Examenes/202406/docker/index.html:/usr/share/nginx/html/index.html nginx
+   87  docker run -d -p 8080:80 -v /UTN-FRA_SO_Examenes/202406/docker/index.html:/usr/share/nginx/html/index.html nginx
+   88  docker ps
+   89  df -h
+   90  docker build -t danellys/web1-rondon:latest .
+   91  vim Dockerfile
+   92  ls -l
+   93  docker build -t web1-rondon .
+   94  vim Dockerfile 
+   95  ls -l
+   96  docker ps
+   97  sudo systemctl restart docker
+   98  docker build -t web1-rondon .
+   99  cd ..
+  100  ls -l
+  101  git clone https://github.com/Oriana27/UTNFRA_SO_2do_Parcial_Rondon.git
+  102  cd UTN-FRA_SO_Examenes/
+  103  ls -l
+  104  ls 202406
+  105  cd 202406
+  106  cd ..
+  107  ls -l
+  108  pwd
+  109  cp -r /UTN-FRA_SO_Examenes/202406 /UTNFRA_SO_2do_Parcial_Rondon
+  110  cd UTNFRA_SO_2do_Parcial_Rondon/
+  111  ls -l
+  112  cp -r /home/vagrant/UTN-FRA_SO_Examenes/202406 /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon
+  113  ls -l
+  114  mkdir -p /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)
+  115  cp -r /home/vagrant/RTA_Examen_20241115/* /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)/
+  116  ls -l
+  117  cd RTA_Examen_20241116/
+  118  ls -l
+  119  car Punto_A.sh
+  120  cat Punto_A.sh
+  121  cd ..
+  122  ls -l
+  123  git add .
+  124  git commit -m "Resguardando trabajo"
+  125  git config --global danellysoriana22@gmail.com
+  126  cat .ssh/id_ed25519.pub
+  127  cd ..
+  128  cat .ssh/id_ed25519.pub
+  129  git clone git@github.com:Oriana27/UTNFRA_SO_2do_Parcial_Rondon.git
+  130  rm -rf /UTNFRA_SO_2do_Parcial_Rondon
+  131  ls -l
+  132  rm -rf /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon
+  133  ls -l
+  134  git clone git@github.com:Oriana27/UTNFRA_SO_2do_Parcial_Rondon.git
+  135  ls -l
+  136  ssh-keyscan github.com >> ~/.ssh/known_hosts
+  137  ssh-keygen -t ed25519 -C "danellysoriana22@gmail.com"
+  138  git clone git@github.com:Oriana27/UTNFRA_SO_2do_Parcial_Rondon.git
+  139  cat ~/.ssh/id_ed25519.pub
+  140  ssh -T git@github.com
+  141  git clone git@github.com:Oriana27/UTNFRA_SO_2do_Parcial_Rondon.git
+  142  ls -l
+  143  cd UTNFRA_SO_2do_Parcial_Rondon/
+  144  ls -l
+  145  cp -r /home/vagrant/UTN-FRA_SO_Examenes/202406 /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon
+  146  mkdir -p /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)
+  147  cp -r /home/vagrant/RTA_Examen_20241115/* /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)/
+  148  ls -l
+  149  git add .
+  150  git status
+  151  git commit -m "Resguardando trabajo"
+  152  git config --global user.name "Danellys"
+  153  git config --global user.email "danellysoriana22@gmail.com"
+  154  git commit -m "Resguardando trabajo"
+  155  git push -u origin main
+  156  clear
+  157  cd ..
+  158  cd /home/vagrant/UTN-FRA_SO_Examenes/202406
+  159  ls -l
+  160  cd docker/
+  161  ls -l
+  162  docker build -t web1-Rondon .
+  163  docker build -t web1-rondon .
+  164  lsblk
+  165  cd ..
+  166  sudo umount /var/lib/docker 
+  167  sudo umount /work
+  168  docker container prune
+  169  docker image prune
+  170  docker volume prune
+  171  docker system prune -a
+  172  lsblk
+  173  docker info
+  174  df -h
+  175  sudo systemctl stop docker
+  176  docker.socket
+  177  sudo vgs
+  178  sudo lvdisplay /dev/mapper/vg_datos-lv_docker
+  179  sudo lvextend -l +100%FREE /dev/mapper/vg_datos-lv_docker
+  180  sudo resize2fs /dev/mapper/vg_datos-lv_docker
+  181  df -h
+  182  cd UTN-FRA_SO_Examenes/
+  183  ls -l
+  184  cd 202406
+  185  cd docker/
+  186  ls -l
+  187  docker build -t web1-rondon .
+  188  sudo systemctl stop docker
+  189  sudo mkdir -p /home/vagrant/foo/docker
+  190  docker container prune
+  191  docker image prune
+  192  docker volume prune
+  193  docker build -t web1-rondon .
+  194  docker login -u Danellys
+  195  docker login -u danellys
+  196  docker build -t web1-rondon .
+  197  ls -l
+  198  cat Dockerfile 
+  199  vim Dockerfile 
+  200  docker build -t web1-rondon .
+  201  vim imagen.sh
+  202  ls -l
+  203  vim run.sh
+  204  cd ..
+  205  cd RTA_Examen_20241115/
+  206  ls -l
+  207  vim Punto_A.sh
+  208  cd .. 
+  209  cd UTN-FRA_SO_Examenes/
+  210  ls -l
+  211  202406
+  212  cd 202406
+  213  ls -l
+  214  cd ansible/
+  215  ls -l
+  216  cd roles/
+  217  ls -l
+  218  cd 2do_parcial/
+  219  ls -l
+  220  cd tasks/
+  221  ls -l
+  222  cat main.yml 
+  223  cd ..
+  224  ls -l
+  225  cd tests/
+  226  ls -l
+  227  cat inventory 
+  228  vim inventory 
+  229  ls -l
+  230  cat test.yml 
+  231  cd ..
+  232  ls -l
+  233  vim playbook.yml
+  234  ls -l
+  235  cd ..
+  236  cd UTN-FRA_SO_Examenes/
+  237  cd202406
+  238  cd 202406
+  239  cd ansible/
+  240  ls -l
+  241  cat playbook.yml 
+  242  cd inventory/
+  243  ls -l
+  244  cd ..
+  245  cd roles/
+  246  ls -l
+  247  rm playbook.yml 
+  248  ls -l
+  249  cd 2do_parcial/
+  250  ls -l
+  251  cd tasks/
+  252  ls -l
+  253  vim main.yml 
+  254  cd ..
+  255  ls -l
+  256  mkdir files
+  257  ls -l
+  258  cd files/
+  259  vim datos_alumno.txt
+  260  ls -l
+  261  ifconfig
+  262  ip a
+  263  lsb_release -a
+  264  lscpu
+  265  nproc
+  266  vim datos_equipos.txt
+  267  cd ..
+  268  ls -l
+  269  cd tasks/
+  270  ls -l
+  271  vim main.yml 
+  272  cd ..
+  273  cd files/
+  274  vim datos_alumno.txt 
+  275  cd ..
+  276  cd tasks/
+  277  vim main.yml 
+  278  cat main.yml 
+  279  cd ..
+  280  cd UTNFRA_SO_2do_Parcial_Rondon/
+  281  cp -r /home/vagrant/UTN-FRA_SO_Examenes/202406/* /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/
+  282  cp -r /home/vagrant/RTA_Examen_20241115/* /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)/
+  283  git status
+  284  git add .
+  285  git commit -m "Respaldando avances"
+  286  git push -u origin main
+  287  history >> "historial_2_parcial.txt"
