@@ -65,6 +65,11 @@ sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker
 sudo mount /dev/mapper/vg_datos-lv_workareas /work
 sudo swapon /dev/mapper/vg_temp-lv_swap
 
+echo "Expandiendo LV"
+
+sudo lvextend -l +100%FREE /dev/mapper/vg_datos-lv_docker
+sudo resize2fs /dev/mapper/vg_datos-lv_docker
+
 sudo mount -a
 echo "Reiniciando Docker para aplicar los cambios"
 sudo systemctl restart docker

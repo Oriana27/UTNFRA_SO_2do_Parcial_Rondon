@@ -1,0 +1,21 @@
+---
+# tasks file for 2do_parcial
+
+- debug:
+    msg: "Tareas del 2do Parcial"
+# roles/2do_parcial/tasks/main.yml
+---
+- name: Crear directorios alumno y equipo
+  shell: "mkdir -p /tmp/2do_parcial/{alumno,equipo}"
+  become: true
+
+- name: Copiar archivo datos_alumno.txt
+  copy:
+    src: "datos_alumno.txt"  
+    dest: "/tmp/2do_parcial/alumno/datos_alumno.txt"  
+  
+- name: Copiar archivo datos_equipo.txt
+  copy:
+    src: "datos_equipo.txt"  
+    dest: "/tmp/2do_parcial/equipo/datos_equipo.txt"  
+
