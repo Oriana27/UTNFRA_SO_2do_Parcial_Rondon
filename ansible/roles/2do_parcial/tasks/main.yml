@@ -3,19 +3,36 @@
 
 - debug:
     msg: "Tareas del 2do Parcial"
-# roles/2do_parcial/tasks/main.yml
----
+
 - name: Crear directorios alumno y equipo
-  shell: "mkdir -p /tmp/2do_parcial/{alumno,equipo}"
+  file:
+    path: "/tmp/2do_parcial/{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - alumno
+    - equipo
   become: true
 
 - name: Copiar archivo datos_alumno.txt
   copy:
-    src: "datos_alumno.txt"  
-    dest: "/tmp/2do_parcial/alumno/datos_alumno.txt"  
-  
+    src: "datos_alumno.txt"
+    dest: "/tmp/2do_parcial/alumno/datos_alumno.txt"
+  become: true
+
 - name: Copiar archivo datos_equipo.txt
   copy:
-    src: "datos_equipo.txt"  
-    dest: "/tmp/2do_parcial/equipo/datos_equipo.txt"  
+    src: "datos_equipo.txt"
+    dest: "/tmp/2do_parcial/equipo/datos_equipo.txt"
+  become: true
+
+- name: Configurar sudoers para el grupo 2PSupervisores
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/2p_supervisores
+    state: present
+    create: yes
+    mode: '0440'
+    line: '%2PSupervisores ALL=(ALL) NOPASSWD: ALL'
+  become: true
+  tags: sudoers_config
 

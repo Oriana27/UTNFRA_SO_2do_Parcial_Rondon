@@ -14,3 +14,157 @@
 }
 2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
 2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 21:32:49,920 p=2211 u=vagrant n=ansible | ERROR! the playbook: ansible/playbook.yml could not be found
+2024-11-16 21:34:31,549 p=2214 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-16 21:34:32,272 p=2214 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-16 21:34:32,351 p=2214 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-16 21:34:32,563 p=2214 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-16 21:34:34,974 p=2214 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 21:34:35,003 p=2214 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-16 21:34:35,057 p=2214 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document
+
+The error appears to be in '/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+# roles/2do_parcial/tasks/main.yml
+---
+^ here
+
+2024-11-16 21:34:35,062 p=2214 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-16 21:34:35,062 p=2214 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 21:34:35,063 p=2214 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 21:40:33,114 p=2326 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-16 21:40:33,408 p=2326 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-16 21:40:33,433 p=2326 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-16 21:40:33,588 p=2326 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-16 21:40:35,639 p=2326 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 21:40:35,662 p=2326 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-16 21:40:35,724 p=2326 u=vagrant n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-16 21:40:35,775 p=2326 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-16 21:40:35,795 p=2326 u=vagrant n=ansible | TASK [2do_parcial : Crear directorios alumno y equipo] *************************
+2024-11-16 21:40:36,414 p=2326 u=vagrant n=ansible | [WARNING]: Consider using the file module with state=directory rather than
+running 'mkdir'.  If you need to use command because file is insufficient you
+can add 'warn: false' to this command task or set 'command_warnings=False' in
+ansible.cfg to get rid of this message.
+
+2024-11-16 21:40:36,418 p=2326 u=vagrant n=ansible | changed: [localhost]
+2024-11-16 21:40:36,443 p=2326 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_alumno.txt] ***************************
+2024-11-16 21:40:37,468 p=2326 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "checksum": "458f7aa8f78c91087e1aa40541b05a628b7d6e42", "msg": "Destination directory /tmp/2do_parcial/alumno does not exist"}
+2024-11-16 21:40:37,472 p=2326 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-16 21:40:37,474 p=2326 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 21:40:37,474 p=2326 u=vagrant n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-16 21:47:26,945 p=2502 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-16 21:47:27,247 p=2502 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-16 21:47:27,271 p=2502 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-16 21:47:27,407 p=2502 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-16 21:47:29,520 p=2502 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 21:47:29,544 p=2502 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-16 21:47:29,645 p=2502 u=vagrant n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-16 21:47:29,672 p=2502 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-16 21:47:29,686 p=2502 u=vagrant n=ansible | TASK [2do_parcial : Crear directorios alumno y equipo] *************************
+2024-11-16 21:47:30,451 p=2502 u=vagrant n=ansible | [WARNING]: Consider using the file module with state=directory rather than
+running 'mkdir'.  If you need to use command because file is insufficient you
+can add 'warn: false' to this command task or set 'command_warnings=False' in
+ansible.cfg to get rid of this message.
+
+2024-11-16 21:47:30,452 p=2502 u=vagrant n=ansible | changed: [localhost]
+2024-11-16 21:47:30,475 p=2502 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_alumno.txt] ***************************
+2024-11-16 21:47:31,776 p=2502 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "checksum": "458f7aa8f78c91087e1aa40541b05a628b7d6e42", "msg": "Destination directory /tmp/2do_parcial/alumno does not exist"}
+2024-11-16 21:47:31,781 p=2502 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-16 21:47:31,783 p=2502 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 21:47:31,783 p=2502 u=vagrant n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-16 21:52:26,842 p=2681 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-16 21:52:27,069 p=2681 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-16 21:52:27,094 p=2681 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-16 21:52:27,554 p=2681 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-16 21:52:29,255 p=2681 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 21:52:29,279 p=2681 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-16 21:52:29,341 p=2681 u=vagrant n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-16 21:52:29,370 p=2681 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-16 21:52:29,384 p=2681 u=vagrant n=ansible | TASK [2do_parcial : Crear directorios alumno y equipo] *************************
+2024-11-16 21:52:30,181 p=2681 u=vagrant n=ansible | changed: [localhost] => (item=alumno)
+2024-11-16 21:52:30,601 p=2681 u=vagrant n=ansible | changed: [localhost] => (item=equipo)
+2024-11-16 21:52:30,623 p=2681 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_alumno.txt] ***************************
+2024-11-16 21:52:31,843 p=2681 u=vagrant n=ansible | changed: [localhost]
+2024-11-16 21:52:31,856 p=2681 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_equipo.txt] ***************************
+2024-11-16 21:52:31,982 p=2681 u=vagrant n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-11-16 21:52:31,984 p=2681 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Could not find or access 'datos_equipo.txt'\nSearched in:\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/files/datos_equipo.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/datos_equipo.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/files/datos_equipo.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/datos_equipo.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/files/datos_equipo.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/datos_equipo.txt on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-11-16 21:52:31,988 p=2681 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-16 21:52:31,989 p=2681 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 21:52:31,989 p=2681 u=vagrant n=ansible | localhost                  : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-16 22:00:30,538 p=2914 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-16 22:00:30,840 p=2914 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-16 22:00:30,869 p=2914 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-16 22:00:31,006 p=2914 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-16 22:00:33,131 p=2914 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 22:00:33,164 p=2914 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-16 22:00:33,236 p=2914 u=vagrant n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-16 22:00:33,261 p=2914 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-16 22:00:33,276 p=2914 u=vagrant n=ansible | TASK [2do_parcial : Crear directorios alumno y equipo] *************************
+2024-11-16 22:00:34,031 p=2914 u=vagrant n=ansible | ok: [localhost] => (item=alumno)
+2024-11-16 22:00:34,557 p=2914 u=vagrant n=ansible | ok: [localhost] => (item=equipo)
+2024-11-16 22:00:34,578 p=2914 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_alumno.txt] ***************************
+2024-11-16 22:00:35,836 p=2914 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 22:00:35,851 p=2914 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_equipo.txt] ***************************
+2024-11-16 22:00:36,740 p=2914 u=vagrant n=ansible | changed: [localhost]
+2024-11-16 22:00:36,752 p=2914 u=vagrant n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ***********
+2024-11-16 22:00:37,539 p=2914 u=vagrant n=ansible | changed: [localhost]
+2024-11-16 22:00:37,553 p=2914 u=vagrant n=ansible | TASK [Otra tarea] **************************************************************
+2024-11-16 22:00:37,583 p=2914 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-16 22:00:37,614 p=2914 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-16 22:00:37,615 p=2914 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 22:00:37,615 p=2914 u=vagrant n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 22:07:13,104 p=3255 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-16 22:07:13,387 p=3255 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-16 22:07:13,410 p=3255 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-16 22:07:13,560 p=3255 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-16 22:07:15,687 p=3255 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 22:07:15,728 p=3255 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-16 22:07:15,792 p=3255 u=vagrant n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-16 22:07:15,821 p=3255 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-16 22:07:15,834 p=3255 u=vagrant n=ansible | TASK [2do_parcial : Crear directorios alumno y equipo] *************************
+2024-11-16 22:07:16,557 p=3255 u=vagrant n=ansible | ok: [localhost] => (item=alumno)
+2024-11-16 22:07:17,037 p=3255 u=vagrant n=ansible | ok: [localhost] => (item=equipo)
+2024-11-16 22:07:17,050 p=3255 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_alumno.txt] ***************************
+2024-11-16 22:07:18,346 p=3255 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 22:07:18,362 p=3255 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_equipo.txt] ***************************
+2024-11-16 22:07:19,336 p=3255 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 22:07:19,350 p=3255 u=vagrant n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ***********
+2024-11-16 22:07:20,027 p=3255 u=vagrant n=ansible | ok: [localhost]
+2024-11-16 22:07:20,044 p=3255 u=vagrant n=ansible | TASK [Otra tarea] **************************************************************
+2024-11-16 22:07:20,079 p=3255 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-16 22:07:20,118 p=3255 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-16 22:07:20,120 p=3255 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-16 22:07:20,124 p=3255 u=vagrant n=ansible | localhost                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
