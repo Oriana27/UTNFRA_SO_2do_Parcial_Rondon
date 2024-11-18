@@ -526,3 +526,205 @@ mkdir -p /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)
 cp -r /home/vagrant/RTA_Examen_20241115/* /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)/
 history -a
 cp $HOME/.bash_history /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon /.bash_history
+cp $HOME/.bash_history /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/.bash_history
+tree
+git status
+git add .
+git commit -m "Agregando ultimas actualizaciones"
+git push -u origin main
+lsblk -f
+sudo pvs
+sudo lvs
+free -h
+swapon -s
+df -h
+ls -l /usr/local/bin/
+cat /usr/local/bin/*AltaUser-Groups.sh
+grep -i 2P /etc/passwd
+sudo grep -iE "${vagrant}|2P" /etc/shadow
+ls -l /work/
+docker ps
+curl localhost:8080
+cat ansible/roles/2do_parcial/tasks/main.yml
+cat ansible/roles/2do_parcial/templates/*
+cd ..
+cd UTN-FRA_SO_Examenes/202406/ansible/
+ls -l
+cd roles/2do_parcial/
+ls -l
+mv files templates
+ls -l
+cat templates
+ls -l templates
+cd tasks/
+vim main.yml 
+cd ..
+ansible-playbook -i inventory playbook.yml
+vim main.yml 
+cd roles/2do_parcial/
+vim main.yml 
+cd tasks/
+vim main.yml 
+cd ..
+ansible-playbook -i inventory playbook.yml
+vim roles/2do_parcial/tasks/main.yml 
+ansible-playbook -i inventory playbook.yml
+vim roles/2do_parcial/tasks/main.yml 
+mv templates files 
+ls -l roles/2do_parcial/
+mv templates files 
+cd roles/2do_parcial/
+mv templates files 
+ls -l
+cd ..
+cat ansible/roles/2do_parcial/files/*
+cat roles/2do_parcial/files/*
+exit
+cd UTN-FRA_SO_Examenes/202406/ansible/
+ls -l
+cat README.md 
+cd ..
+ls -l
+cd 202311
+ls -l
+cat 202311_2doParcial.pdf 
+ls -l
+cd ..
+ls -l
+cd 202311_Recu/
+ls -l
+reset; ansible-playbook -i inventory/hosts playbook.yml
+ls -l
+cd ansible/
+ls -l
+cat README.md 
+cd roles/
+ls -l
+cd multi_Pruebas/
+ls -l
+cd tasks/
+ls -l
+cat main.yml 
+cat prueba_202311_Recu2doParcial.yml 
+vim prueba_202311_Recu2doParcial.yml 
+cd ..
+cd templates/
+ls -l
+cat template_01.j2 
+vim template_01.j2 
+cd ..
+ls -l
+cd tasks/
+ls -l
+vim prueba_202311_Recu2doParcial.yml 
+cd ..
+cd templates/
+ls -l 
+vim datos_alumno.j2
+vim datos_equipo.j2
+ls -l
+cd ..
+ls -l
+ansible-playbook -i inventory/hosts playbook.yml
+ls -l ~/UTN-FRA_SO_Examenes/202311_Recu/ansible/roles/multi_Pruebas/
+cd ..
+ls -l
+cd ..
+ls -l
+ansible-playbook -i inventory/hosts playbook.yml
+ls -l /tmp/2do_parcial/
+ls -l
+cd inventory/
+ls -l
+cat host
+cat hosts
+/home/vagrant/UTN-FRA_SO_Examenes/202311_Recu/ansible/prueba_202311_2doParcial.yml
+cd ..
+/home/vagrant/UTN-FRA_SO_Examenes/202311_Recu/ansible/prueba_202311_2doParcial.yml
+ls -l
+ls -l roles/
+ls -l roles/multi_Pruebas/
+ls -l roles/multi_Pruebas/tasks/
+vim roles/multi_Pruebas/tasks/prueba_202311_Recu2doParcial.yml 
+vim roles/multi_Pruebas/tasks/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml
+ls -l /tmp/2do_parcial/
+cat /home/vagrant/UTN-FRA_SO_Examenes/202311_Recu/ansible/roles/multi_pruebas/tasks/prueba_202311_2doParcial.yml
+ls -l
+cd roles/
+ls -l
+cd multi_Pruebas/
+ls -l
+cd tasks/
+ls -l
+cat /UTN-FRA_SO_Examenes/202311_Recu/ansible/roles/multi_Pruebas/tasks/prueba_202311_Recu2doParcial.yml
+cat UTN-FRA_SO_Examenes/202311_Recu/ansible/roles/multi_Pruebas/tasks/prueba_202311_Recu2doParcial.yml
+cat ~/UTN-FRA_SO_Examenes/202311_Recu/ansible/roles/multi_Pruebas/tasks/prueba_202311_Recu2doParcial.yml
+vim roles/multi_Pruebas/tasks/main.yml 
+vim main.yml 
+cat /home/vagrant/UTN-FRA_SO_Examenes/202311_Recu/ansible/roles/multi_Pruebas/tasks/prueba_202311_2doParcial.yml
+vim main.yml 
+cd ..
+ansible-playbook -i inventory/hosts playbook.yml
+ls -l /tmp/2do_parcial/
+ls -l /tmp/2do_parcial/alumno/
+cat /tmp/2do_parcial/alumno/datos_alumno.txt 
+ls -l /tmp/2do_parcial/equipo/
+ls -l roles/multi_Pruebas/templates/
+vim roles/multi_Pruebas/templates/datos_equipo.j2 
+ansible-playbook -i inventory/hosts playbook.yml
+ls -l /tmp/2do_parcial/equipo
+cat /tmp/2do_parcial/equipo/datos_equipo.txt
+ls -l
+cd ..
+ls -l
+cd Directorio_Home/
+ls -l
+cd ..
+cd RTA_Examen_20241115/
+ls -l
+vim Punto_D.sh
+cd ..
+cd UTN-FRA_SO_Examenes/
+ls -l
+cd 202406/ansible/
+ls -l
+cd roles/
+ls -l
+cd 2do_parcial/
+ls -l
+mkdir tmplates
+ls -l
+rm tests/
+rmdir tmplates/
+mkdir templates
+cd templates/
+vim datos_alumno.j2
+vim datos_equipo.j2
+ls -l
+cd ..
+cd tasks/
+ls -l
+vim main.yml 
+cd ..
+cd v..
+cd ..
+ansible-playbook -i inventory/hosts playbook.yml 
+vim roles/2do_parcial/tasks/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+vim roles/2do_parcial/tasks/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+vim roles/2do_parcial/tasks/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+cd ..
+vim RTA_Examen_20241115/Punto_D.sh
+history -a
+cd UTNFRA_SO_2do_Parcial_Rondon/
+cp -r /home/vagrant/UTN-FRA_SO_Examenes/202406/* /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/
+mkdir -p /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)
+cp -r /home/vagrant/RTA_Examen_20241115/* /home/vagrant/UTNFRA_SO_2do_Parcial_Rondon/RTA_Examen_$(date +%Y%m%d)/
+history -a
+$HOME/.bash_history
+cd ..
+$HOME/.bash_history
+cd UTNFRA_SO_2do_Parcial_Rondon/

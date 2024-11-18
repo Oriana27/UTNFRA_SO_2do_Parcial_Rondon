@@ -1,38 +1,33 @@
 ---
-# tasks file for 2do_parcial
-
-- debug:
-    msg: "Tareas del 2do Parcial"
-
-- name: Crear directorios alumno y equipo
+- name: Crear estructura de directorios
   file:
-    path: "/tmp/2do_parcial/{{ item }}"
+    path: /tmp/2do_parcial/{{ item }}
     state: directory
     mode: '0755'
-  loop:
+  with_items:
     - alumno
     - equipo
-  become: true
 
-- name: Copiar archivo datos_alumno.txt
-  copy:
-    src: "datos_alumno.txt"
-    dest: "/tmp/2do_parcial/alumno/datos_alumno.txt"
-  become: true
+- name: Generar archivo datos_alumno.txt
+  template:
+    src: datos_alumno.j2
+    dest: /tmp/2do_parcial/alumno/datos_alumno.txt
+    mode: '0644'
 
-- name: Copiar archivo datos_equipo.txt
-  copy:
-    src: "datos_equipo.txt"
-    dest: "/tmp/2do_parcial/equipo/datos_equipo.txt"
-  become: true
+- name: Generar archivo datos_equipo.txt
+  template:
+    src: datos_equipo.j2
+    dest: /tmp/2do_parcial/equipo/datos_equipo.txt
+    mode: '0644'
 
 - name: Configurar sudoers para el grupo 2PSupervisores
-  ansible.builtin.lineinfile:
-    path: /etc/sudoers.d/2p_supervisores
-    state: present
-    create: yes
+  copy:
+    dest: /etc/sudoers.d/2PSupervisores
+    content: |
+      %2PSupervisores ALL=(ALL) NOPASSWD: ALL
     mode: '0440'
-    line: '%2PSupervisores ALL=(ALL) NOPASSWD: ALL'
-  become: true
-  tags: sudoers_config
+  become: true  # Esto otorga privilegios de root a la tarea
 
+- name: Mostrar mensaje de éxito
+  debug:
+    msg: "Archivo configurado exitosamente."

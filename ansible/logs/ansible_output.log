@@ -168,3 +168,177 @@ localhost was 127.0.0.1
 2024-11-16 22:07:20,118 p=3255 u=vagrant n=ansible | PLAY RECAP *********************************************************************
 2024-11-16 22:07:20,120 p=3255 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
 2024-11-16 22:07:20,124 p=3255 u=vagrant n=ansible | localhost                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 05:03:16,981 p=5296 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-17 05:03:17,250 p=5296 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-17 05:03:17,267 p=5296 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-17 05:03:17,713 p=5296 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 05:03:19,033 p=5296 u=vagrant n=ansible | ok: [localhost]
+2024-11-17 05:03:19,049 p=5296 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-17 05:03:19,090 p=5296 u=vagrant n=ansible | ERROR! couldn't resolve module/action 'templates'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Crear directorios alumno y equipo
+  ^ here
+
+2024-11-17 05:03:19,092 p=5296 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-17 05:03:19,093 p=5296 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 05:03:19,093 p=5296 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 05:06:35,869 p=5405 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-17 05:06:36,082 p=5405 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-17 05:06:36,100 p=5405 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-17 05:06:36,447 p=5405 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 05:06:37,830 p=5405 u=vagrant n=ansible | ok: [localhost]
+2024-11-17 05:06:37,848 p=5405 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-17 05:06:37,895 p=5405 u=vagrant n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-17 05:06:37,922 p=5405 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-17 05:06:37,935 p=5405 u=vagrant n=ansible | TASK [2do_parcial : Crear directorios alumno y equipo] *************************
+2024-11-17 05:06:38,053 p=5405 u=vagrant n=ansible | failed: [localhost] (item=alumno) => {"ansible_loop_var": "item", "changed": false, "item": "alumno", "msg": "'state' cannot be specified on a template"}
+2024-11-17 05:06:38,122 p=5405 u=vagrant n=ansible | failed: [localhost] (item=equipo) => {"ansible_loop_var": "item", "changed": false, "item": "equipo", "msg": "'state' cannot be specified on a template"}
+2024-11-17 05:06:38,126 p=5405 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-17 05:06:38,127 p=5405 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 05:06:38,127 p=5405 u=vagrant n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-17 05:09:42,449 p=5581 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-17 05:09:42,628 p=5581 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-17 05:09:42,646 p=5581 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-17 05:09:42,987 p=5581 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 05:09:44,255 p=5581 u=vagrant n=ansible | ok: [localhost]
+2024-11-17 05:09:44,275 p=5581 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-17 05:09:44,325 p=5581 u=vagrant n=ansible | TASK [2do_parcial : debug] *****************************************************
+2024-11-17 05:09:44,344 p=5581 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-17 05:09:44,359 p=5581 u=vagrant n=ansible | TASK [2do_parcial : Crear directorios alumno y equipo] *************************
+2024-11-17 05:09:44,915 p=5581 u=vagrant n=ansible | ok: [localhost] => (item=alumno)
+2024-11-17 05:09:45,222 p=5581 u=vagrant n=ansible | ok: [localhost] => (item=equipo)
+2024-11-17 05:09:45,234 p=5581 u=vagrant n=ansible | TASK [2do_parcial : Copiar archivo datos_alumno.txt] ***************************
+2024-11-17 05:09:45,338 p=5581 u=vagrant n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-11-17 05:09:45,340 p=5581 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Could not find or access 'datos_alumno.txt'\nSearched in:\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/files/datos_alumno.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/datos_alumno.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/files/datos_alumno.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/datos_alumno.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/files/datos_alumno.txt\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/datos_alumno.txt on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-11-17 05:09:45,344 p=5581 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-17 05:09:45,345 p=5581 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 05:09:45,347 p=5581 u=vagrant n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 14:50:56,869 p=2906 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-18 14:50:57,132 p=2906 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-18 14:50:57,157 p=2906 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-18 14:50:57,657 p=2906 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-18 14:50:59,011 p=2906 u=vagrant n=ansible | ok: [localhost]
+2024-11-18 14:50:59,036 p=2906 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-18 14:50:59,090 p=2906 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to be in '/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 31, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+echo "Archivo configurado exitosamente."
+^ here
+
+2024-11-18 14:50:59,091 p=2906 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-18 14:50:59,094 p=2906 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 14:50:59,094 p=2906 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 14:53:32,051 p=3040 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-18 14:53:32,278 p=3040 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-18 14:53:32,296 p=3040 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-18 14:53:32,724 p=3040 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-18 14:53:33,964 p=3040 u=vagrant n=ansible | ok: [localhost]
+2024-11-18 14:53:33,983 p=3040 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-18 14:53:34,046 p=3040 u=vagrant n=ansible | TASK [2do_parcial : Crear estructura de directorios] ***************************
+2024-11-18 14:53:34,604 p=3040 u=vagrant n=ansible | ok: [localhost] => (item=alumno)
+2024-11-18 14:53:34,923 p=3040 u=vagrant n=ansible | ok: [localhost] => (item=equipo)
+2024-11-18 14:53:34,934 p=3040 u=vagrant n=ansible | TASK [2do_parcial : Generar archivo datos_alumno.txt] **************************
+2024-11-18 14:53:36,073 p=3040 u=vagrant n=ansible | ok: [localhost]
+2024-11-18 14:53:36,082 p=3040 u=vagrant n=ansible | TASK [2do_parcial : Generar archivo datos_equipo.txt] **************************
+2024-11-18 14:53:36,920 p=3040 u=vagrant n=ansible | changed: [localhost]
+2024-11-18 14:53:36,932 p=3040 u=vagrant n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ***********
+2024-11-18 14:53:37,257 p=3040 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/2PSupervisores): Permission denied"}
+2024-11-18 14:53:37,261 p=3040 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-18 14:53:37,262 p=3040 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 14:53:37,263 p=3040 u=vagrant n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 14:55:44,552 p=3292 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-18 14:55:44,792 p=3292 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-18 14:55:44,810 p=3292 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-18 14:55:44,936 p=3292 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-18 14:55:46,601 p=3292 u=vagrant n=ansible | ok: [localhost]
+2024-11-18 14:55:46,625 p=3292 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-18 14:55:46,671 p=3292 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  found unexpected end of stream
+
+The error appears to be in '/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 34, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  debug:
+    msg: "Archivo configurado exitosamente.
+^ here
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2024-11-18 14:55:46,673 p=3292 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-18 14:55:46,673 p=3292 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 14:55:46,674 p=3292 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 14:57:20,432 p=3396 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found
+localhost was 127.0.0.1
+
+2024-11-18 14:57:20,649 p=3396 u=vagrant n=ansible | PLAY [all] *********************************************************************
+2024-11-18 14:57:20,667 p=3396 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-11-18 14:57:21,064 p=3396 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-18 14:57:22,285 p=3396 u=vagrant n=ansible | ok: [localhost]
+2024-11-18 14:57:22,308 p=3396 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **********************************************
+2024-11-18 14:57:22,362 p=3396 u=vagrant n=ansible | TASK [2do_parcial : Crear estructura de directorios] ***************************
+2024-11-18 14:57:22,952 p=3396 u=vagrant n=ansible | ok: [localhost] => (item=alumno)
+2024-11-18 14:57:23,254 p=3396 u=vagrant n=ansible | ok: [localhost] => (item=equipo)
+2024-11-18 14:57:23,272 p=3396 u=vagrant n=ansible | TASK [2do_parcial : Generar archivo datos_alumno.txt] **************************
+2024-11-18 14:57:24,361 p=3396 u=vagrant n=ansible | ok: [localhost]
+2024-11-18 14:57:24,407 p=3396 u=vagrant n=ansible | TASK [2do_parcial : Generar archivo datos_equipo.txt] **************************
+2024-11-18 14:57:25,112 p=3396 u=vagrant n=ansible | ok: [localhost]
+2024-11-18 14:57:25,128 p=3396 u=vagrant n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ***********
+2024-11-18 14:57:25,987 p=3396 u=vagrant n=ansible | changed: [localhost]
+2024-11-18 14:57:25,998 p=3396 u=vagrant n=ansible | TASK [2do_parcial : Mostrar mensaje de éxito] **********************************
+2024-11-18 14:57:26,021 p=3396 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Archivo configurado exitosamente."
+}
+2024-11-18 14:57:26,037 p=3396 u=vagrant n=ansible | TASK [Otra tarea] **************************************************************
+2024-11-18 14:57:26,057 p=3396 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 14:57:26,082 p=3396 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-11-18 14:57:26,084 p=3396 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 14:57:26,084 p=3396 u=vagrant n=ansible | localhost                  : ok=7    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
